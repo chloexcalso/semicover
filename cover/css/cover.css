@@ -1,0 +1,128 @@
+/* this is where all of your CSS styles go */
+
+.grid_container {
+	width: 800px;
+	height: 1200px;
+	position: absolute;
+	background: #222222;
+	left: 50%;
+	top: 50%; /* for optical centering */
+	transform: translate(-50%, -50%);
+}
+
+.grad {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background:linear-gradient(45deg, red, orange, yellow, green, blue, purple);
+	background-size: 300% 300%;
+	z-index: -1;
+	animation: grad 8.5s;
+	animation-fill-mode: forwards;
+}
+
+
+.text {
+	font-family: "Gilroy";
+	color: white;
+	text-align: center;
+	width: 600px;
+	height: 100px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@font-face {
+	font-family:'Gilroy';
+	src:url(../fonts/Gilroy-Regular.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: 'Golos';
+	src:url(../fonts/golos-text_vf.woff) format('woff');
+}
+
+.min { 
+	font-size: 2.2em;
+	margin-top: -420px;
+ }
+
+ .author {
+ 	font-size: 2.2em;
+ 	letter-spacing: 8px;
+ 	margin-top: -25px;
+ }
+
+ .title { 
+ 	font-size: 6em;
+ 	letter-spacing: 7px;
+ 	text-transform: uppercase;
+ 	margin-top: 650px;
+ 	font-family: Golos;
+ 	animation: weight 3s alternate;
+ 	animation-fill-mode: forwards;
+  }
+
+  .subtitle {
+  	font-size: 1.8em;
+  	margin-top: -70px;
+  }
+
+  .subtitle2 {
+  	font-size: 1.8em;
+  	margin-top: -23px;
+  }
+
+.circle {
+	width: 115px;
+	height: 115px;
+	background: #ffffff;
+	position: absolute;
+	left: 20%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 100%;
+	float: center;
+	z-index: 1;
+	animation: switch 3s;
+	animation-fill-mode: forwards;
+}
+
+
+.bar {
+	width: 350px;
+	height: 130px;
+	background: #EE9999;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	float: center;
+	border-radius: 75px;
+	animation: change 3s;
+	animation-fill-mode: forwards ;
+}
+
+@keyframes weight {
+	0% {font-variation-settings: "wght" 400;}
+	100% {font-variation-settings: "wght" 700;}
+}
+
+@keyframes switch {
+	0% {top: 65px; left:90px; background: #ffffff}
+	100% {top:65px; left: 280px; background: #272727}
+}
+
+@keyframes change {
+	0% {top: 600px; background: #EE9999;}
+	100% {top: 600px; background: #ffffff;}
+}
+
+@keyframes grad {
+	0% {background-position: 0% 50%; background: #222222;}
+	50% {background-position: 0% 50%; }
+	75% {background-position: 100% 50%; }
+	100% {background-position: 0% 50%; }
+}
